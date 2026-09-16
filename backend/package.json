@@ -1,0 +1,23 @@
+{
+  "name": "praveen-portfolio-backend",
+  "version": "1.0.0",
+  "description": "Production-ready backend API service for Praveen L Kumbalur Portfolio",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "backend",
+    "api",
+    "express"
+  ],
+  "author": "Praveen L Kumbalur <praveenlk41@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}

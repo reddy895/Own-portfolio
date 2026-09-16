@@ -90,9 +90,9 @@ export const EXPERIENCES: ExperienceItem[] = [
     period: "May 2026 – Aug 2026",
     type: "Professional Experience",
     description: [
-      "Developed and evaluated machine learning models for classification and prediction tasks.",
-      "Performed data cleaning, feature engineering, model training, and performance evaluation.",
-      "Collaborated on testing and optimization of AI solutions for practical applications."
+      "Developed Company Activity Agent using Python, PowerShell, and Windows Services.",
+      "Implemented system monitoring, application tracking, heartbeat, sessions, and offline data queuing.",
+      "Integrated APIs, logging, testing, error handling, and reliable background service deployment."
     ]
   },
   {
@@ -102,8 +102,8 @@ export const EXPERIENCES: ExperienceItem[] = [
     period: "Aug 2026 – Present",
     type: "Internship",
     description: [
-      "Developed responsive full-stack web applications using React.js, Node.js, Express.js, and MongoDB.",
-      "Designed and integrated REST APIs, database schemas, and frontend components.",
+      "Developed LOOP AI platform using Next.js, TypeScript, PostgreSQL, Prisma, and Gemini.",
+      "Implemented RAG, feedback classification, embeddings, vector search, and intelligent customer insights.",
       "Worked on debugging, testing, and integration to improve application functionality."
     ]
   }
@@ -267,10 +267,10 @@ export const HACKATHONS: HackathonItem[] = [
     organizer: "24-Hour Technical Sprint"
   },
   {
-    id: "hack-buza-2024",
+    id: "hack-buzz-2026",
     role: "PARTICIPANT",
-    name: "Hack Buza",
-    organizer: "IKYA 2024"
+    name: "Hack Buzz",
+    organizer: "IKYA 2026"
   }
 ];
 

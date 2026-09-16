@@ -20,11 +20,16 @@ export default function SafeWatchAI() {
   const frameRef = useRef(0);
   const [alertActive, setAlertActive] = useState(false);
   const [status, setStatus] = useState<'CLEAR' | 'MONITORING' | 'THREAT DETECTED'>('MONITORING');
-  const [camLabel] = useState(() => FEED_LABELS[Math.floor(Math.random() * FEED_LABELS.length)]);
+  const [camLabel, setCamLabel] = useState(FEED_LABELS[0]);
   const [detections, setDetections] = useState<Detection[]>([
     { id: 1, x: 38, y: 52, label: 'P-001', state: 'normal' },
     { id: 2, x: 62, y: 48, label: 'P-002', state: 'normal' },
   ]);
+
+  // Set random cam label only on the client to avoid SSR hydration mismatch
+  useEffect(() => {
+    setCamLabel(FEED_LABELS[Math.floor(Math.random() * FEED_LABELS.length)]);
+  }, []);
 
   // Animate persons and simulate threat detection
   useEffect(() => {

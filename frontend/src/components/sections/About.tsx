@@ -84,7 +84,7 @@ export default function About() {
 
         {/* Two-Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          {/* Left Column: Pixel Avatar Card */}
+          {/* Left Column: Identity Card (no duplicate photo) */}
           <div className="lg:col-span-5">
             <div className="bg-white border-2 border-black p-6 shadow-[5px_5px_0px_#111]">
               <div className="flex items-center justify-between pb-3 border-b-2 border-black">
@@ -99,29 +99,31 @@ export default function About() {
                 </span>
               </div>
 
-              {/* Profile Photo Frame */}
-              <div className="my-6 flex flex-col items-center justify-center p-5 bg-[#F7F7F5] border-2 border-black relative">
-                <div className="relative w-48 h-56 sm:w-52 sm:h-60 border-2 border-black bg-black shadow-[4px_4px_0px_#111] hover:shadow-[5px_5px_0px_#E31B23] overflow-hidden transition-all group">
-                  <img
-                    src="/profile.jpg"
-                    alt={PERSONAL_INFO.name}
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
-                  />
-                  {/* Pixel HUD badge */}
-                  <div className="absolute top-2 right-2 px-2 py-0.5 bg-[#E31B23] text-white text-[9px] font-pixel font-bold shadow-[2px_2px_0px_#111]">
-                    DEV::ACTIVE
-                  </div>
-                  {/* Tech crosshairs */}
-                  <span className="absolute bottom-1.5 left-2 text-[10px] font-pixel text-[#E31B23] font-bold">[ + ]</span>
-                </div>
-
-                <div className="mt-4 text-center">
+              {/* Identity Block */}
+              <div className="my-6 flex flex-col gap-3">
+                <div className="p-4 bg-[#F7F7F5] border-2 border-black shadow-[3px_3px_0px_#111]">
+                  <div className="text-[10px] font-pixel text-[#555555] mb-1">NAME:</div>
                   <div className="text-sm font-pixel font-bold text-black tracking-wider uppercase">
                     {PERSONAL_INFO.name}
                   </div>
-                  <div className="text-xs text-[#E31B23] font-pixel flex items-center justify-center gap-1 mt-0.5 font-bold">
-                    <MapPin className="w-3 h-3" />
-                    <span>Bengaluru, India</span>
+                </div>
+                <div className="p-4 bg-[#F7F7F5] border-2 border-black shadow-[3px_3px_0px_#111]">
+                  <div className="text-[10px] font-pixel text-[#555555] mb-1">ROLE:</div>
+                  <div className="text-sm font-pixel font-bold text-black uppercase">
+                    AI/ML ENGINEER
+                  </div>
+                </div>
+                <div className="p-4 bg-[#E31B23] border-2 border-black shadow-[3px_3px_0px_#111]">
+                  <div className="text-[10px] font-pixel text-red-100 mb-1">STATUS:</div>
+                  <div className="text-sm font-pixel font-bold text-white uppercase tracking-wider">
+                    OPEN TO OPPORTUNITIES
+                  </div>
+                </div>
+                <div className="p-4 bg-[#F7F7F5] border-2 border-black shadow-[3px_3px_0px_#111]">
+                  <div className="text-[10px] font-pixel text-[#555555] mb-1">LOCATION:</div>
+                  <div className="flex items-center gap-1.5">
+                    <MapPin className="w-3 h-3 text-[#E31B23]" />
+                    <span className="text-sm font-pixel font-bold text-black">Bengaluru, India</span>
                   </div>
                 </div>
               </div>
@@ -133,18 +135,17 @@ export default function About() {
                   <span className="text-black font-bold">AI Engineering</span>
                 </div>
                 <div className="flex justify-between py-1 border-b border-neutral-200">
-                  <span className="text-[#555555]">STATUS:</span>
-                  <span className="text-[#E31B23] font-bold">
-                    OPEN TO OPPORTUNITIES
-                  </span>
-                </div>
-                <div className="flex justify-between py-1">
                   <span className="text-[#555555]">CORE STACK:</span>
                   <span className="text-black font-bold">AI/ML + Full Stack</span>
+                </div>
+                <div className="flex justify-between py-1">
+                  <span className="text-[#555555]">FOCUS:</span>
+                  <span className="text-black font-bold">Useful Intelligence</span>
                 </div>
               </div>
             </div>
           </div>
+
 
           {/* Right Column: Bio + Light Pixel Terminal */}
           <div className="lg:col-span-7 space-y-6">
